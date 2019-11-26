@@ -1,0 +1,13 @@
+1) A page where someone can submit an essay (and their name) and get a grade back, according to the following rubric: 
+        Start the score at 100 points.
+        -1 deduction for spelling and nasty no nos
+        -2 for contractions
+        -3 for N2S
+        -5 for each word over the maximum word count (250 words)
+        -50 if they fall below the minimum word count (100 words)
+        -200 if you detect plagiarism (you can choose what defines "plagiarism", this is optional)
+        The minimum possible grade is -100 points.
+
+2) A page for admins to be able to see all submitted essays with their grades (no authentication required). In addition, admins should be able to manually change the grade for any essay, while preserving the original grade. OPTIONAL - have an interface to curve the grades of all the submitted essays to be within a certain range, while preserving the relative order of the grades, and display both the raw and curved scores.
+
+if you have questions (expected), feel free to ask any member. you should be using nodejs for the backend (we recommend express/koa), but you can use any framework you want for other parts of the project.
