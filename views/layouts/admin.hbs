@@ -1,9 +1,10 @@
+<form  method="POST" autocomplete="off"action="/admin">
 <table>
     <thead>
         <tr>
             <th>
                 <h3>Student Name</h3>
-                
+
             </th>
             <th>
                 <h3>Essay</h3>
@@ -15,22 +16,24 @@
     </thead>
     <tbody>
         {{#each list}}
-        <tr>
+        <tr style="text-align: center; margin: auto;">
             <th>
                 {{this.name}}
             </th>
             <th>
-                <textarea rows="4" cols="50" readonly>
+                <textarea name = "essay">
                     {{this.essay}}
                 </textarea>
-                
+
             </th>
             <th>
-                {{this.grade}}
+                <input type="number" name = "grade" value="{{this.grade}}" style='width:40px' />
             </th>
         </tr>
-        
+
         {{/each}}
     </tbody>
 
 </table>
+<button type="submit" class="btn">Update</button>
+</form>
