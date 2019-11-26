@@ -12,6 +12,7 @@ app.listen(4000, function(){console.log('Running on port 4000');});
 app.set('views', path.join(__dirname, '/views/'));
 app.engine('hbs', handle({extname:'hbs', defaultLayout: 'main'}));
 app.set('view engine', 'hbs');
-app.get('/', (req, res) => res.redirect('/upload'));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/index.html')));
 app.use('/upload', clientController);
 app.use('/admin', adminController)
+app.use('/*', (req, res) => res.sendFile(path.join(__dirname + '/index.html')));

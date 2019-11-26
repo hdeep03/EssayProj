@@ -14,16 +14,12 @@
             </th>
         </tr>
     </thead>
-    <tbody>
+    <tbody style = "margin:auto">
         {{#each list}}
         <tr style="text-align: center; margin: auto;">
+            <th>{{this.name}}</th>
             <th>
-                {{this.name}}
-            </th>
-            <th>
-                <textarea name = "essay">
-                    {{this.essay}}
-                </textarea>
+                <textarea name = "essay">{{this.essay}}</textarea>
 
             </th>
             <th>
