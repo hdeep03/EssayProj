@@ -1,0 +1,36 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                <h3>Student Name</h3>
+                
+            </th>
+            <th>
+                <h3>Essay</h3>
+            </th>
+            <th>
+                <h3>Grade</h3>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <th>
+                {{this.name}}
+            </th>
+            <th>
+                <textarea rows="4" cols="50" readonly>
+                    {{this.essay}}
+                </textarea>
+                
+            </th>
+            <th>
+                {{this.grade}}
+            </th>
+        </tr>
+        
+        {{/each}}
+    </tbody>
+
+</table>
